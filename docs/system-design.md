@@ -87,7 +87,7 @@ The application must ensure that:
 
 ## 6. Initial Security Questions
 
-During development we will investigate questions such as:
+During development, we will investigate questions such as:
 
 - Can a user manipulate a resource ID to access another user's data?
 - Can ownership be changed through a request?
@@ -112,7 +112,7 @@ Spring Boot REST API
    +-- Persistence
           |
           v
-      PostgreSQL
+      PostgresSQL
 ```
 
 The first version will remain a monolithic application.
