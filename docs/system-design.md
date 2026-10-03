@@ -146,3 +146,45 @@ The first version is complete when:
 - important behavior is covered by automated tests
 - basic security tests have been performed
 - architectural and security decisions are documented
+
+## 10. Data Model
+
+### User
+
+- id
+- email
+- passwordHash
+- role
+
+### Resource
+
+- id
+- title
+- content
+- owner
+- createdAt
+- updatedAt
+
+A resource belongs to exactly one user.
+
+The owner is determined by the authenticated backend context and must not be freely assignable by the client.
+
+## 11. Trust Boundaries
+
+The client is considered untrusted.
+
+All client-provided input must be validated and authorized by the backend.
+
+## 12. Ownership Rule
+
+A user may only access, update, or delete resources they own.
+
+Ownership must be verified by the backend for every protected resource operation.
+
+## 13. API Data Exposure
+
+Persistence entities must not be returned directly by the API.
+
+DTOs will be used to control which data is exposed externally.
+
+Sensitive fields such as password hashes must never be returned to clients.
