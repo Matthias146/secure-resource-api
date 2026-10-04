@@ -1,7 +1,7 @@
-package resource;
+package security.secure_resource_api.resource;
 
 import jakarta.persistence.*;
-import user.User;
+import security.secure_resource_api.user.User;
 
 import java.time.Instant;
 
@@ -34,5 +34,27 @@ public class Resource {
     private Instant updatedAt;
 
     protected Resource() {
+    }
+
+    public Resource(
+            String title,
+            String content,
+            User owner,
+            Instant createdAt,
+            Instant updatedAt
+    ) {
+        this.title = title;
+        this.content = content;
+        this.owner = owner;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }

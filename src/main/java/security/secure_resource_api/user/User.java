@@ -1,4 +1,4 @@
-package user;
+package security.secure_resource_api.user;
 
 import jakarta.persistence.*;
 
@@ -29,5 +29,15 @@ public class User {
     private Role role;
 
     protected User() {
+    }
+
+    public User(String email, String passwordHash, Role role) {
+        this.email = email;
+        this.passwordHash = passwordHash;
+        this.role = role;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

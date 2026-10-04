@@ -1,4 +1,4 @@
-package resource;
+package security.secure_resource_api.resource;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

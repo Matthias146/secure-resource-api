@@ -1,4 +1,4 @@
-package user;
+package security.secure_resource_api.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
