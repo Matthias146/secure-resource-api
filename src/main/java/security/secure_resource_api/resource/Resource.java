@@ -50,11 +50,37 @@ public class Resource {
         this.updatedAt = updatedAt;
     }
 
+    public void update(
+            String title,
+            String content,
+            Instant updatedAt
+    ) {
+        this.title = title;
+        this.content = content;
+        this.updatedAt = updatedAt;
+    }
+
     public Long getId() {
         return id;
     }
 
     public String getTitle() {
         return title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public Instant getUpdatedAt() {
+        return updatedAt;
     }
 }
